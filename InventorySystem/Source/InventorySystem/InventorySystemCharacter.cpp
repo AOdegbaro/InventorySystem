@@ -78,6 +78,9 @@ void AInventorySystemCharacter::SetupPlayerInputComponent(class UInputComponent*
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
+		//Interact
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &AInventorySystemCharacter::Interact);
+
 		//Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AInventorySystemCharacter::Move);
 
@@ -121,6 +124,24 @@ void AInventorySystemCharacter::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+	}
+}
+
+void AInventorySystemCharacter::Interact()
+{
+	FVector Start = FollowCamera->GetComponentLocation();
+	FVector End = Start + FollowCamera->GetForwardVector() * 600.0f;
+
+	FHitResult HitResult;
+	FCollisionQueryParams Params;
+	Params.AddIgnoredActor(this);
+	
+	if(GetWorld() -> LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, Params))
+	{
+		if(AActor* Actor = HitResult.GetActor())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *Actor->GetName());
+		}
 	}
 }
 
