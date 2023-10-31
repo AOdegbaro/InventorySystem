@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InventorySystem/Interfaces/InteractionInterface.h"
+#include "InventorySystem/Data Struct/ItemDataStruct.h"
 #include "MainItem.generated.h"
+
 
 UCLASS()
 class INVENTORYSYSTEM_API AMainItem : public AActor, public IInteractionInterface
@@ -22,6 +24,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category= "Item Asset")
 	class UStaticMeshComponent* ItemMesh;
+
+	UPROPERTY(EditDefaultsOnly, Category="Item Asset")
+	FItem ItemData;
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
