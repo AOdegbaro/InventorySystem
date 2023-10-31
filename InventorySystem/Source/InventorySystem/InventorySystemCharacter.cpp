@@ -9,6 +9,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "InventorySystem/Actors/MainItem.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -138,9 +139,9 @@ void AInventorySystemCharacter::Interact()
 	
 	if(GetWorld() -> LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, Params))
 	{
-		if(AActor* Actor = HitResult.GetActor())
+		if(IInteractionInterface* InteractionInterface = Cast<IInteractionInterface>(HitResult.GetActor())) 
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *Actor->GetName());
+			InteractionInterface->Interact();
 		}
 	}
 }
