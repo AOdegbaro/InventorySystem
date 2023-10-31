@@ -4,7 +4,7 @@
 #include "ItemDataStruct.generated.h"
 
 USTRUCT(BlueprintType)
-struct FItem
+struct FItemData
 {
 	
 	GENERATED_USTRUCT_BODY()

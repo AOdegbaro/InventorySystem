@@ -26,7 +26,7 @@ protected:
 	class UStaticMeshComponent* ItemMesh;
 
 	UPROPERTY(EditDefaultsOnly, Category="Item Asset")
-	FItem ItemData;
+	FItemData ItemData;
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
