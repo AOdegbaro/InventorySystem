@@ -18,7 +18,9 @@ public:
 	// Sets default values for this actor's properties
 	AMainItem();
 
-	virtual void Interact() override;
+	virtual void Interact(class AInventorySystemCharacter* PlayerCharacter) override;
+
+	FItemData GetItemData() const { return ItemData; }
 
 protected:
 

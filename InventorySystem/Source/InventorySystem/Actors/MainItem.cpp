@@ -2,6 +2,7 @@
 
 
 #include "MainItem.h"
+#include "InventorySystem/InventorySystemCharacter.h"
 
 
 // Sets default values
@@ -14,8 +15,12 @@ AMainItem::AMainItem()
 	RootComponent = ItemMesh;
 }
 
-void AMainItem::Interact()
+void AMainItem::Interact(class AInventorySystemCharacter* PlayerCharacter)
 {
+	if(PlayerCharacter)
+	{
+		PlayerCharacter->AddItemToInventoryWidget(ItemData);
+	}
 	Destroy();
 }
 

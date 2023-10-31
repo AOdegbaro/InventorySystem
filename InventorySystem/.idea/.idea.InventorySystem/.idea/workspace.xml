@@ -7,7 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45a42cfd-2e69-4727-9a87-0441a4ecbb01" name="Changes" comment="Added Interact Input Action to InventorySystemCharacter.h. In the Interact function made a custom line trace from the FollowCamera to debug what the player is interacting with. Created a UMG widget for a crosshair so the player can see what they are aiming at with the line trace. - AO" />
+    <list default="true" id="45a42cfd-2e69-4727-9a87-0441a4ecbb01" name="Changes" comment="Added Interact Input Action to InventorySystemCharacter.h. In the Interact function made a custom line trace from the FollowCamera to debug what the player is interacting with. Created a UMG widget for a crosshair so the player can see what they are aiming at with the line trace. - AO">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InventorySystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InventorySystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/W_Inventory.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/W_Inventory.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/W_InventoryItem.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/W_InventoryItem.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/InventorySystem/Actors/MainItem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/InventorySystem/Actors/MainItem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/InventorySystem/Actors/MainItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/InventorySystem/Actors/MainItem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/InventorySystem/Interfaces/InteractionInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/InventorySystem/Interfaces/InteractionInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/InventorySystem/InventorySystemCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/InventorySystem/InventorySystemCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/InventorySystem/InventorySystemCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/InventorySystem/InventorySystemCharacter.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698713029372</updated>
-      <workItem from="1698713035388" duration="5448000" />
+      <workItem from="1698713035388" duration="7550000" />
     </task>
     <task id="LOCAL-00001" summary="Added Interact Input Action to InventorySystemCharacter.h. In the Interact function made a custom line trace from the FollowCamera to debug what the player is interacting with. Created a UMG widget for a crosshair so the player can see what they are aiming at with the line trace. - AO">
       <option name="closed" value="true" />

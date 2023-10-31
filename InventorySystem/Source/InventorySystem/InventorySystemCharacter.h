@@ -8,6 +8,8 @@
 #include "InventorySystemCharacter.generated.h"
 
 
+struct FItemData;
+
 UCLASS(config=Game)
 class AInventorySystemCharacter : public ACharacter
 {
@@ -55,6 +57,8 @@ protected:
 
 	/** Called for Interacting input */
 	void Interact();
+
+	
 			
 
 protected:
@@ -69,5 +73,8 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	UFUNCTION(BlueprintImplementableEvent, Category= "Inventory")
+	void AddItemToInventoryWidget(FItemData ItemData);
 };
 

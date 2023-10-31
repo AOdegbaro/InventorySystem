@@ -141,7 +141,7 @@ void AInventorySystemCharacter::Interact()
 	{
 		if(IInteractionInterface* InteractionInterface = Cast<IInteractionInterface>(HitResult.GetActor())) 
 		{
-			InteractionInterface->Interact();
+			InteractionInterface->Interact(this);
 		}
 	}
 }
